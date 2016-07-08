@@ -1,2 +1,2 @@
-# changedirective
+# ChangeDirective
 ChangeDirective - Change  PHP directives
