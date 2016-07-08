@@ -3,6 +3,7 @@
 namespace helionogueir\changedirective\cgi;
 
 use Exception;
+use helionogueir\typeBoxing\type\String;
 use helionogueir\typeBoxing\type\Boolean;
 
 /**
@@ -27,7 +28,7 @@ class Language {
   public static final function make(String $locale, String $collate = null) {
     $auth = false;
     try {
-      if (!$timezone->isEmpty()) {
+      if (!$locale->isEmpty()) {
         $_locale = "{$locale}";
         if (!$collate->isEmpty()) {
           $_locale .= ".{$collate}";
