@@ -18,18 +18,22 @@ class Debug {
   const HOMOLOGATION = 'homologation';
   const PRODUCTION = 'production';
 
+  /**
+   * Block construct the class, because this class is static
+   * @return false
+   */
   public function __construct() {
     return false;
   }
 
   /**
    * Make debug:
-   * - Mount debug configuration;
+   * - Mount debug configuration
    * 
    * @param helionogueir\typeBoxing\type\String $mode Mode name
-   * @return bool Return if debug was implemented
+   * @return helionogueir\typeBoxing\type\Boolean Return if debug was implemented
    */
-  public static final function make(String $mode = null) {
+  public static final function set(String $mode = null) {
     switch ($mode) {
       case Debug::HOMOLOGATION:
       case Debug::DEVELOPER:

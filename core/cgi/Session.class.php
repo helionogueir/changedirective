@@ -6,7 +6,7 @@ use Exception;
 use helionogueir\typeBoxing\type\Boolean;
 
 /**
- * Configuration of language:
+ * Configuration of session:
  * - Load language pettern in application;
  *
  * @author Helio Nogueira <helio.nogueir@gmail.com>
@@ -14,6 +14,10 @@ use helionogueir\typeBoxing\type\Boolean;
  */
 class Session {
 
+  /**
+   * Block construct the class, because this class is static
+   * @return false
+   */
   public function __construct() {
     return false;
   }
@@ -22,9 +26,9 @@ class Session {
    * Make language:
    * - Mount language configuration;
    * 
-   * @return bool Return if language was implemented
+   * @return helionogueir\typeBoxing\type\Boolean Return if language was implemented
    */
-  public static final function make() {
+  public static final function start() {
     $auth = false;
     try {
       if (!isset($_SESSION)) {
