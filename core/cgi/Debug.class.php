@@ -2,9 +2,6 @@
 
 namespace helionogueir\changedirective\cgi;
 
-use helionogueir\typeBoxing\type\String;
-use helionogueir\typeBoxing\type\Boolean;
-
 /**
  * Configuration of debug:
  * - Load debug pettern in application;
@@ -19,21 +16,13 @@ class Debug {
   const PRODUCTION = 'production';
 
   /**
-   * Block construct the class, because this class is static
-   * @return false
-   */
-  public function __construct() {
-    return false;
-  }
-
-  /**
    * Make debug:
    * - Mount debug configuration
    * 
-   * @param helionogueir\typeBoxing\type\String $mode Mode name
-   * @return helionogueir\typeBoxing\type\Boolean Return if debug was implemented
+   * @param string $mode Mode name
+   * @return bool Return if debug was implemented
    */
-  public static final function set(String $mode = null) {
+  public function set(string $mode = null) {
     switch ($mode) {
       case Debug::HOMOLOGATION:
       case Debug::DEVELOPER:
@@ -50,7 +39,7 @@ class Debug {
         $auth = true;
         break;
     }
-    return new Boolean(true);
+    return true;
   }
 
 }

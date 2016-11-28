@@ -3,8 +3,6 @@
 namespace helionogueir\changedirective\cgi;
 
 use Exception;
-use helionogueir\typeBoxing\type\String;
-use helionogueir\typeBoxing\type\Boolean;
 
 /**
  * Configuration of timezone:
@@ -16,31 +14,23 @@ use helionogueir\typeBoxing\type\Boolean;
 class Timezone {
 
   /**
-   * Block construct the class, because this class is static
-   * @return false
-   */
-  public function __construct() {
-    return false;
-  }
-
-  /**
    * Make timezone:
    * - Mount timezone configuration
    * 
-   * @param helionogueir\typeBoxing\type\String $timezone Code of timezone
-   * @return helionogueir\typeBoxing\type\Boolean Return if language was implemented
+   * @param string $timezone Code of timezone
+   * @return bool Return if language was implemented
    */
-  public static final function set(String $timezone) {
+  public function set(string $timezone) {
     $auth = false;
     try {
-      if (!$timezone->isEmpty()) {
+      if (!empty($timezone)) {
         date_default_timezone_set($timezone);
         $auth = true;
       }
     } catch (Exception $ex) {
       throw $ex;
     }
-    return new Boolean($auth);
+    return $auth;
   }
 
 }

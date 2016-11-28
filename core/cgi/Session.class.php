@@ -3,7 +3,6 @@
 namespace helionogueir\changedirective\cgi;
 
 use Exception;
-use helionogueir\typeBoxing\type\Boolean;
 
 /**
  * Configuration of session:
@@ -15,20 +14,12 @@ use helionogueir\typeBoxing\type\Boolean;
 class Session {
 
   /**
-   * Block construct the class, because this class is static
-   * @return false
-   */
-  public function __construct() {
-    return false;
-  }
-
-  /**
    * Make language:
    * - Mount language configuration;
    * 
-   * @return helionogueir\typeBoxing\type\Boolean Return if language was implemented
+   * @return bool Return if language was implemented
    */
-  public static final function start() {
+  public function start() {
     $auth = false;
     try {
       if (!isset($_SESSION)) {
@@ -39,7 +30,7 @@ class Session {
       $auth = false;
       throw $ex;
     }
-    return new Boolean($auth);
+    return $auth;
   }
 
 }
