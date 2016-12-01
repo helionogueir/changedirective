@@ -5,7 +5,8 @@
     "license": "MIT",
     "keywords": ["library", "tool", "php", "cgi", "debug", "session", "timezone", "language"],
     "require": {
-        "php": ">=7.1"
+        "php": ">=7.1",
+        "helionogueir/languagepack": "=v1.1.0"
     },
     "autoload": {
         "files": ["core/autoload/register.inc"]

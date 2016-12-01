@@ -1,0 +1,4 @@
+{
+    "changedirective:path:notexists": "Direrectory \"{data:pathname}\" not exists",
+    "changedirective:maxlifetime:none": "Livfetime not be none, zero or empty"
+}

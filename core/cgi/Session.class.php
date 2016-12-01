@@ -3,6 +3,8 @@
 namespace helionogueir\changedirective\cgi;
 
 use Exception;
+use helionogueir\languagepack\Lang;
+use helionogueir\changedirective\autoload\LanguagePack;
 
 /**
  * Configuration of session:
@@ -13,22 +15,41 @@ use Exception;
  */
 class Session {
 
-  /**
-   * Make language:
-   * - Mount language configuration;
-   * 
-   * @return bool Return if language was implemented
-   */
-  public function start() {
-    $auth = false;
+  private $isStart = false;
+
+  public function setMaxLifetime(int $second): Session {
+    if (!$this->isStart) {
+      if ($second) {
+        ini_set("session.gc_maxlifetime", $second);
+      } else {
+        Lang::addRoot(LanguagePack::PACKAGE, LanguagePack::PATH);
+        throw new Exception(Lang::get("changedirective:maxlifetime:none", "helionogueir/changedirective"));
+      }
+    }
+    return $this;
+  }
+
+  public function setPath(string $pathname): Session {
+    if (!$this->isStart) {
+      if (is_dir($pathname)) {
+        ini_set("session.save_path", $pathname);
+      } else {
+        Lang::addRoot(LanguagePack::PACKAGE, LanguagePack::PATH);
+        throw new Exception(Lang::get("changedirective:path:notexists", "helionogueir/changedirective", Array("pathname" => $pathname)));
+      }
+    }
+    return $this;
+  }
+
+  public function start(string $sessionSavePath = null) {
+    $auth = true;
     try {
       if (!isset($_SESSION)) {
         session_start();
+        $this->isStart = true;
       }
-      $auth = true;
     } catch (Exception $ex) {
       $auth = false;
-      throw $ex;
     }
     return $auth;
   }
