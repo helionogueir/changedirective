@@ -3,9 +3,7 @@
 namespace helionogueir\changedirective\cgi;
 
 /**
- * Configuration of debug:
- * - Load debug pettern in application;
- *
+ * - Define debug mode;
  * @author Helio Nogueira <helio.nogueir@gmail.com>
  * @version v1.0.0
  */
@@ -16,30 +14,29 @@ class Debug {
   const PRODUCTION = 'production';
 
   /**
-   * Make debug:
-   * - Mount debug configuration
-   * 
+   * - Set debug mode
    * @param string $mode Mode name
-   * @return bool Return if debug was implemented
+   * @return bool Return true case $mode exits, or return false and set debug PRODUCTION mode
    */
-  public function set(string $mode = null) {
+  public function set(string $mode) {
+    $auth = false;
+    file_exists($mode);
     switch ($mode) {
       case Debug::HOMOLOGATION:
       case Debug::DEVELOPER:
         ini_set('display_errors', true);
-        ini_set('display_startup_erros', true);
         error_reporting(E_ALL);
         $auth = true;
         break;
       case Debug::PRODUCTION:
+        $auth = true;
       default:
         ini_set('display_errors', false);
-        ini_set('display_startup_erros', false);
         error_reporting(E_ERROR);
-        $auth = true;
+        $auth = $auth ?? false;
         break;
     }
-    return true;
+    return $auth;
   }
 
 }

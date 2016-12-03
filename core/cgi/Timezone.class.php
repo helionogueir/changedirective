@@ -5,20 +5,16 @@ namespace helionogueir\changedirective\cgi;
 use Exception;
 
 /**
- * Configuration of timezone:
- * - Load timezone pettern in application
- *
+ * - Define timezone of application
  * @author Helio Nogueira <helio.nogueir@gmail.com>
  * @version v1.0.0
  */
 class Timezone {
 
   /**
-   * Make timezone:
-   * - Mount timezone configuration
-   * 
-   * @param string $timezone Code of timezone
-   * @return bool Return if language was implemented
+   * - Set timezone locale
+   * @param string $timezone Codename of timezone locale
+   * @return bool Return true case timezone set, or false case fail
    */
   public function set(string $timezone) {
     $auth = false;
