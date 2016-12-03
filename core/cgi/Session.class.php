@@ -17,7 +17,7 @@ class Session {
 
   /**
    * - Set session max lifetime
-   * @param int $second Time in seconds of lifetime of session
+   * @param int $second Time in seconds of lifetime of session (Ex: 3600 = 1 hour)
    * @return bool Return true case time set, or false case fail
    */
   public function setMaxLifetime(int $second): Session {
@@ -34,7 +34,7 @@ class Session {
 
   /**
    * - Set session save path
-   * @param string $pathname Pathname of directory of storage session files
+   * @param string $pathname Pathname of directory of storage session files (Ex: /tmp)
    * @return bool Return true case Pathname set, or false case fail
    */
   public function setPath(string $pathname): Session {
@@ -53,7 +53,7 @@ class Session {
    * - Session start
    * @return bool Return true case sesion start set, or false case fail
    */
-  public function start() {
+  public function start(): bool {
     try {
       if (!isset($_SESSION)) {
         session_start();

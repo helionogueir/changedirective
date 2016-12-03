@@ -13,11 +13,11 @@ class Locale {
 
   /**
    * - Set locale and collate
-   * @param string $locale Codename of locale
-   * @param string $collate Codename of collate
+   * @param string $locale Codename of locale (Ex: en-US)
+   * @param string $collate Codename of collate (Ex: utf-8)
    * @return bool Return true case locale set, or false case fail
    */
-  public function set(string $locale, string $collate = null) {
+  public function set(string $locale, string $collate): bool {
     $auth = false;
     try {
       if (!empty($locale)) {

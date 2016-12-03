@@ -15,10 +15,10 @@ class Debug {
 
   /**
    * - Set debug mode
-   * @param string $mode Mode name
+   * @param string $mode Mode name (Ex: Debug::DEVELOPER, Debug::HOMOLOGATION, Debug::PRODUCTION)
    * @return bool Return true case $mode exits, or return false and set debug PRODUCTION mode
    */
-  public function set(string $mode) {
+  public function set(string $mode): bool {
     $auth = false;
     file_exists($mode);
     switch ($mode) {

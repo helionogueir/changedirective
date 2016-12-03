@@ -14,7 +14,7 @@ class LocaleTest extends TestCase {
   }
 
   public function testSetFail() {
-    $this->assertFalse((new Locale())->set(""));
+    $this->assertFalse((new Locale())->set("", ""));
   }
 
 }

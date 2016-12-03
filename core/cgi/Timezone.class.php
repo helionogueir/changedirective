@@ -13,10 +13,10 @@ class Timezone {
 
   /**
    * - Set timezone locale
-   * @param string $timezone Codename of timezone locale
+   * @param string $timezone Codename of timezone locale (Ex: Europe/London)
    * @return bool Return true case timezone set, or false case fail
    */
-  public function set(string $timezone) {
+  public function set(string $timezone): bool {
     $auth = false;
     try {
       if (!empty($timezone)) {
