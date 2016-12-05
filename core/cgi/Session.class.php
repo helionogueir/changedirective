@@ -58,6 +58,8 @@ class Session {
       if (!isset($_SESSION)) {
         session_start();
         $this->isStart = true;
+      } else {
+        $this->isStart = true;
       }
     } catch (Exception $ex) {
       $this->isStart = false;
