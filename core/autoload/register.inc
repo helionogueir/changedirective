@@ -5,7 +5,7 @@
  * @author Helio Nogueira <helio.nogueir@gmail.com>
  * @version v1.0.0
  */
-spl_autoload_register(function($classname) {
+spl_autoload_register(function(string $classname) {
   $pattern = "/^(helionogueir\\\\changedirective)\\\\(.*)$/";
   if (preg_match($pattern, $classname)) {
     $classname = preg_replace($pattern, '$2', $classname);
@@ -13,6 +13,6 @@ spl_autoload_register(function($classname) {
     if (file_exists($filename)) {
       require_once($filename);
     }
-    return null;
+    return true;
   }
 });
