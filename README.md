@@ -4,9 +4,7 @@ A simple libraty to change PHP directives in your application.
 
 ## Get Start
 
-#1 Install
-
+**Install***
 Compser (https://getcomposer.org/)
-
 ```ssh
 composer require helionogueir/changedirective
