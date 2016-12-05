@@ -4,7 +4,7 @@ A simple libraty to change PHP directives in your application.
 
 ## Installation
 
-Compser (https://getcomposer.org/)
+Compser (https://getcomposer.org/) / (https://packagist.org/)
 ```sh
 composer require helionogueir/changedirective
 ```
@@ -16,20 +16,50 @@ require_once ("../changedirective/core/autoload/register.inc");
 
 Debug
 
-- Debug application in Developer mode
+- Define debug mode as "Developer"
 ```php
 use helionogueir\changedirective\cgi\Debug;
 (new Debug())->set(Debug::DEVELOPER);
 ```
 
-- Debug application in Homologation mode
+- Define debug mode as "Homologation"
 ```php
 use helionogueir\changedirective\cgi\Debug;
 (new Debug())->set(Debug::HOMOLOGATION);
 ```
 
-- Debug application in Production mode
+- Define debug mode as "Production"
 ```php
 use helionogueir\changedirective\cgi\Debug;
 (new Debug())->set(Debug::PRODUCTION);
+```
+
+Locale
+
+- Define locale as "English, USA", and collate as "UTF-8"
+```php
+use helionogueir\changedirective\cgi\Locale;
+(new Locale())->set("en-US", "utf-8")
+```
+
+Session
+
+- Define session behavior and start session
+```php
+use helionogueir\changedirective\cgi\Session;
+(new Session())
+  // Optional: Define session lifetime
+  ->setMaxLifetime(3600)
+  // Optional: Define session path storage files
+  ->setPath(sys_get_temp_dir())
+  // Start sesson
+  ->start());
+```
+
+Timezone
+
+- Define Locale as "London, England" (https://secure.php.net/manual/timezones.php)
+```php
+use helionogueir\changedirective\cgi\Timezone;
+(new Timezone())->set("Europe/London");
 ```
