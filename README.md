@@ -16,28 +16,22 @@ require_once ("../changedirective/core/autoload/register.inc");
 ```
 ### Functionalities
 
-**Debug**
+Debug
 
+- Debug application in Developer mode
 ```php
-
 use helionogueir\changedirective\cgi\Debug;
-
-// Debug application in Developer mode
 (new Debug())->set(Debug::DEVELOPER);
-
 ```
 
+- Debug application in Homologation mode
 ```php
-
-
-// Debug application in Homologation mode
+use helionogueir\changedirective\cgi\Debug;
 (new Debug())->set(Debug::HOMOLOGATION);
-
 ```
 
+- Debug application in Production mode
 ```php
-
-// Debug application in Production mode
+use helionogueir\changedirective\cgi\Debug;
 (new Debug())->set(Debug::PRODUCTION);
-
 ```
