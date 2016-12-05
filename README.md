@@ -2,9 +2,7 @@
 
 A simple libraty to change PHP directives in your application.
 
-## Get Start
-
-### Install
+## Installation
 
 Compser (https://getcomposer.org/)
 ```sh
@@ -14,7 +12,7 @@ Manual
 ```php
 require_once ("../changedirective/core/autoload/register.inc");
 ```
-### Functionalities
+## Usage
 
 Debug
 
