@@ -9,8 +9,19 @@ namespace helionogueir\changedirective\cgi;
  */
 class Debug {
 
+  /**
+   * - Define developer mode
+   */
   const DEVELOPER = 'developer';
+
+  /**
+   * - Define homologation mode
+   */
   const HOMOLOGATION = 'homologation';
+
+  /**
+   * - Define production mode
+   */
   const PRODUCTION = 'production';
 
   /**

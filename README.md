@@ -4,7 +4,7 @@ A simple libraty to change PHP directives in your application.
 
 ## Installation
 
-Compser (https://getcomposer.org/) / (https://packagist.org/)
+Composer (https://getcomposer.org/) and (https://packagist.org/)
 ```sh
 composer require helionogueir/changedirective
 ```
@@ -16,19 +16,19 @@ require_once ("./changedirective/core/autoload/register.inc");
 
 Debug
 
-- Define debug mode as "Developer"
+Define debug mode as "Developer"
 ```php
 use helionogueir\changedirective\cgi\Debug;
 (new Debug())->set(Debug::DEVELOPER);
 ```
 
-- Define debug mode as "Homologation"
+Define debug mode as "Homologation"
 ```php
 use helionogueir\changedirective\cgi\Debug;
 (new Debug())->set(Debug::HOMOLOGATION);
 ```
 
-- Define debug mode as "Production"
+Define debug mode as "Production"
 ```php
 use helionogueir\changedirective\cgi\Debug;
 (new Debug())->set(Debug::PRODUCTION);
@@ -36,7 +36,7 @@ use helionogueir\changedirective\cgi\Debug;
 
 Locale
 
-- Define locale as "English, USA", and collate as "UTF-8"
+Define locale as "English, USA", and collate as "UTF-8"
 ```php
 use helionogueir\changedirective\cgi\Locale;
 (new Locale())->set("en-US", "utf-8")
@@ -44,7 +44,7 @@ use helionogueir\changedirective\cgi\Locale;
 
 Session
 
-- Define session behavior and start session
+Define session behavior and start session
 ```php
 use helionogueir\changedirective\cgi\Session;
 (new Session())
@@ -58,7 +58,7 @@ use helionogueir\changedirective\cgi\Session;
 
 Timezone
 
-- Define Locale as "London, England" (https://secure.php.net/manual/timezones.php)
+Define Locale as "London, England" (https://secure.php.net/manual/timezones.php)
 ```php
 use helionogueir\changedirective\cgi\Timezone;
 (new Timezone())->set("Europe/London");
