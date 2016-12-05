@@ -63,3 +63,10 @@ Timezone
 use helionogueir\changedirective\cgi\Timezone;
 (new Timezone())->set("Europe/London");
 ```
+
+## TDD (Test Driven Development)
+
+PHPUnit (https://phpunit.de/)
+```sh
+phpunit -c ./changedirective/tests/unit.xml
+```
