@@ -7,10 +7,17 @@ A simple libraty to change PHP directives in your application.
 **Install**
 
 Compser (https://getcomposer.org/)
-```ssh
+```sh
 composer require helionogueir/changedirective
 ```
 PHP (http://www.php.net/)
 ```php
 require_once ("./core/autoload/register.inc");
+```
+
+**Debug**
+
+```php
+use helionogueir\changedirective\cgi\Debug;
+(new Debug())->set(Debug::DEVELOPER);
 ```
