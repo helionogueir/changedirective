@@ -10,7 +10,7 @@ composer require helionogueir/changedirective
 ```
 Manual
 ```php
-require_once ("../changedirective/core/autoload/register.inc");
+require_once ("./changedirective/core/autoload/register.inc");
 ```
 ## Usage
 
