@@ -12,9 +12,10 @@ Manual
 ```php
 require_once ("./changedirective/core/autoload/register.inc");
 ```
-## Usage
 
-Debug
+## Usage
+------
+### Debug
 
 Define debug mode as "Developer"
 ```php
@@ -33,16 +34,16 @@ Define debug mode as "Production"
 use helionogueir\changedirective\cgi\Debug;
 (new Debug())->set(Debug::PRODUCTION);
 ```
-
-Locale
+------
+### Locale
 
 Define locale as "English, USA", and collate as "UTF-8"
 ```php
 use helionogueir\changedirective\cgi\Locale;
 (new Locale())->set("en-US", "utf-8")
 ```
-
-Session
+------
+### Session
 
 Define session behavior and start session
 ```php
@@ -55,8 +56,8 @@ use helionogueir\changedirective\cgi\Session;
   // Start sesson
   ->start());
 ```
-
-Timezone
+------
+### Timezone
 
 Define Locale as "London, England" (https://secure.php.net/manual/timezones.php)
 ```php
