@@ -12,9 +12,9 @@ Manual
 ```php
 require_once ("./changedirective/core/autoload/register.inc");
 ```
-
-## Usage
 ------
+## Usage
+
 ### Debug
 
 Define debug mode as "Developer"
@@ -64,7 +64,7 @@ Define Locale as "London, England" (https://secure.php.net/manual/timezones.php)
 use helionogueir\changedirective\cgi\Timezone;
 (new Timezone())->set("Europe/London");
 ```
-
+---
 ## TDD (Test Driven Development)
 
 PHPUnit (https://phpunit.de/)
