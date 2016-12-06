@@ -3,7 +3,7 @@
 namespace helionogueir\changedirective\cgi;
 
 /**
- * - Define debug mode;
+ * - Define debug mode
  * @author Helio Nogueira <helio.nogueir@gmail.com>
  * @version v1.0.0
  */
