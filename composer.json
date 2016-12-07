@@ -1,6 +1,6 @@
 {
     "name": "helionogueir/changedirective",
-    "description": "ChangeDirective - Change PHP directives",
+    "description": "A simple libraty to change PHP directives in your application",
     "homepage": "https://github.com/helionogueir",
     "license": "MIT",
     "keywords": ["tool", "library", "directives", "debug", "session", "timezone", "locale", "collate"],

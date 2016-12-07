@@ -1,7 +1,5 @@
 <?php
 
-namespace helionogueir\changedirective\tests\unit\cgi;
-
 use PHPUnit\Framework\TestCase;
 use helionogueir\changedirective\cgi\Session;
 
