@@ -8,10 +8,6 @@ Composer (https://getcomposer.org/) and (https://packagist.org/)
 ```sh
 composer require helionogueir/changedirective
 ```
-Manual
-```php
-require_once ("./changedirective/core/autoload/register.inc");
-```
 ------
 ## Usage
 
